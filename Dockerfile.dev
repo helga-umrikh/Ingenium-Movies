@@ -1,0 +1,21 @@
+# базовый образ
+FROM node:20 AS build
+
+# установка рабочей директории
+WORKDIR /frontend-advanced
+
+# установка зависимостей
+COPY package.json package-lock.json ./
+RUN npm install
+
+# копирование проекта
+COPY . .
+
+#копирование переменной
+COPY .env .env
+
+# открытие порта
+EXPOSE 8080
+
+# старт скрипта dev
+CMD ["npm", "run", "dev"]

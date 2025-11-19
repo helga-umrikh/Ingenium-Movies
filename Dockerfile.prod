@@ -1,0 +1,28 @@
+# базовый образ
+FROM node:20 AS build
+
+# установка рабочей директории
+WORKDIR /frontend-advanced
+
+# установка зависимостей
+COPY package.json package-lock.json ./
+RUN npm install
+
+# копирование проекта
+COPY . .
+
+#копирование переменной
+COPY .env .env
+
+#сборка проекта 
+RUN npm run build
+
+#запуск с сервера nginx
+FROM nginx:alpine 
+COPY --from=build /frontend-advanced/public/build /usr/share/nginx/html
+
+# открытие порта
+EXPOSE 80
+
+# старт сервера nginx
+CMD ["nginx", "-g", "daemon off;"]

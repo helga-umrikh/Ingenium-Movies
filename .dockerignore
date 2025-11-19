@@ -1,0 +1,14 @@
+node_modules
+
+build
+dist
+
+.vscode
+.eslint.config.mjs
+.prettierrc
+
+.dockerignore
+Dockerfile
+
+.git
+.gitignore

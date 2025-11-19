@@ -1,0 +1,42 @@
+# ADVANCED TEST APP
+
+REACT | TYPESCRIPT
+
+This document will provide you with an overview of the app and guide you through the process of setting it up and starting it.
+
+# Getting Started
+
+To start using the app, follow the steps below:
+
+## Installation
+
+To install the app and its dependencies, follow the steps below:
+
+1.  **Navigate to the project directory:**
+    Once the repository is cloned, navigate to the project directory using the following command:
+    ```cpp
+    cd frontend-advanced
+    ```
+2.  **Install dependencies:**
+    Before running the app install the package manager npm to install all the dependencies.
+    ```cpp
+    npm install
+    ```
+
+## Starting the App
+
+To start the app, run the following command:
+
+```cpp
+//development mode
+npm run dev
+```
+
+To build the project in production mode use:
+
+```cpp
+//production mode
+npm run build
+```
+
+This will start the development server and open the app in your default web browser.

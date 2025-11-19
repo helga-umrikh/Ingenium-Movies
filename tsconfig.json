@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "skipLibCheck": false,
+    "sourceMap": true,
+    "module": "ESNext",
+    "target": "ES2015",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    //для работы с пакетами, использующими  commonjs через import
+    "esModuleInterop": true,
+    // для библиотек не имеющих default import
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "strict": false,
+      "noImplicitAny": false,
+      "strictNullChecks": false,
+      "skipLibCheck": false,
+    }
+  },
+}
