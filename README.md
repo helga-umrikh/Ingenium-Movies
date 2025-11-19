@@ -1,4 +1,4 @@
-# ADVANCED TEST APP
+# Ingenium TEST APP
 
 REACT | TYPESCRIPT
 
@@ -37,6 +37,23 @@ To build the project in production mode use:
 ```cpp
 //production mode
 npm run build
+```
+
+## Setting env
+
+To use Kinopoisk API you need to get the key from the Telegram bot @poiskkinodev_bot.
+Also you read the documentation:
+```
+https://api.poiskkino.dev/documentation
+
+```
+
+After you successfully get the token, create a .env from the .env.exmaple.
+
+```
+REACT_APP_ACCESS_KEY=''
+PORT = 8080 // you can set your preferable port
+
 ```
 
 This will start the development server and open the app in your default web browser.
