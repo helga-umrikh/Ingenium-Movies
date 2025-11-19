@@ -1,4 +1,4 @@
-# Ingenium TEST APP
+# Ingenium Movie observer APP
 
 REACT | TYPESCRIPT
 
