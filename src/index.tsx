@@ -15,10 +15,12 @@ if (!rootContainer) {
 }
 const root: Root = createRoot(rootContainer);
 
+const basename = process.env.NODE_ENV === 'production' ? '/Ingenium-Movies' : '/';
+
 root.render(
 	<StrictMode>
 		<Provider store={store}>
-			<Router basename="/Ingenium-Movies">
+			<Router basename={basename}>
 				<App />
 			</Router>
 		</Provider>
