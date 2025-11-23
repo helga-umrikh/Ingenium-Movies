@@ -5,6 +5,8 @@ import { Button } from '@components/Button';
 import { StyledContainer } from '@components/Styleds/Container/styled';
 
 import { StyledEmptyFavoriteMovieSection } from './styled';
+import drama__icon from '@assets/drama__icon.png';
+import movie_empty__icon from '@assets/movie-empty__icon.png';
 
 export const EmptyFavoriteMoviesSection: FC = () => {
 	const navigate = useNavigate();
@@ -20,7 +22,7 @@ export const EmptyFavoriteMoviesSection: FC = () => {
 			>
 				<h3>Список любимых фильмов пуст</h3>
 				<picture>
-					<img src={'assets/drama__icon.png'} />
+					<img src={drama__icon} />
 				</picture>
 
 				<p>
@@ -28,7 +30,7 @@ export const EmptyFavoriteMoviesSection: FC = () => {
 					<br /> Для того, чтобы найти любимое кино, перейдите на главную страницу
 				</p>
 				<picture>
-					<img src={`${process.env.PUBLIC_URL}assets/movie-empty__icon.png`} />
+					<img src={movie_empty__icon} />
 				</picture>
 				<Button title={'Вернуться назад'} onClick={() => navigate('/')} />
 			</StyledContainer>

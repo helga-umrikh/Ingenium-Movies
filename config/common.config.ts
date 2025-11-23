@@ -55,11 +55,12 @@ export const config: webpack.Configuration = {
 		],
 	},
 	resolve: {
-		extensions: ['.tsx', '.ts', '.js', '.jsx'],
+		extensions: ['.tsx', '.ts', '.js', '.jsx', '.png', '.jpg', '.gif', '.svg', '.ico'],
 		alias: {
 			'@components': path.resolve(rootPath, 'src/components/'),
 			'@pages': path.resolve(rootPath, 'src/pages/'),
 			'@utils': path.resolve(rootPath, 'src/utils/'),
+			'@assets': path.resolve(rootPath, 'src/assets/'),
 		},
 	},
 	stats: {

@@ -7,6 +7,9 @@ import { StyledContainer } from '@components/Styleds/Container/styled';
 import { favoriteMovies, isDesktop, toggleFavoriteMovie } from '../../redux/slices/moviesSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/store';
 import { StyledMovieCard, StyledMovieCardCover } from './styled';
+import movie_icon from '@assets/movie_icon.png';
+import heart_filled from '@assets/heart_filled.svg';
+import heart from '@assets/heart.svg';
 
 type TMovieCardProps = {
 	movie: TMovieInfo;
@@ -53,19 +56,19 @@ export const MovieCard = React.forwardRef(
 						<source
 							srcSet={
 								imageError
-									? `${process.env.PUBLIC_URL}assets/movie_icon.png`
+									? movie_icon
 									: poster && poster.url
 										? poster.url
-										: `${process.env.PUBLIC_URL}assets/movie_icon.png`
+										: movie_icon
 							}
 						/>
 						<img
 							src={
 								imageError
-									? `${process.env.PUBLIC_URL}assets/movie_icon.png`
+									? movie_icon
 									: poster && poster.url
 										? poster.url
-										: `${process.env.PUBLIC_URL}assets/movie_icon.png`
+										: movie_icon
 							}
 							alt='no poster movie tape icon'
 							onError={() => {
@@ -92,7 +95,7 @@ export const MovieCard = React.forwardRef(
 							}}
 						>
 							<img
-								src={`${process.env.PUBLIC_URL}assets/heart${favorites.some((favoriteMovie) => favoriteMovie.id === movie.id) ? '_filled' : ''}.svg`}
+								src={favorites.some((favoriteMovie) => favoriteMovie.id === movie.id) ? heart_filled : heart}
 								alt='bookmark'
 							/>
 						</StyledContainer>

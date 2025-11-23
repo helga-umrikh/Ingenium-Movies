@@ -5,6 +5,8 @@ import { Button } from '@components/Button';
 import { StyledContainer } from '@components/Styleds/Container/styled';
 
 import { StyledFavoriteMovieCard } from './styled';
+import movie_icon from '@assets/movie_icon.png';
+import delete_icon from '@assets/delete_icon.png';
 
 type TFavoriteMovieCardProps = {
 	movie: TMovieInfo;
@@ -16,13 +18,15 @@ export const FavoriteMovieCard: FC<TFavoriteMovieCardProps> = ({ movie, onClick 
 	return (
 		<StyledFavoriteMovieCard>
 			<picture>
-				<source srcSet={poster && poster.url ? poster.url : `${process.env.PUBLIC_URL}assets/movie_icon.png`} />
+				<source srcSet={poster && poster.url ? poster.url : movie_icon} />
 				<img
 					src={
 						poster && poster.url
 							? poster.url
-							: `${process.env.PUBLIC_URL}assets/movie_icon.png' alt='no poster movie tape icon`
+							: movie_icon
 					}
+					
+					alt='movie tape icon'
 				/>
 			</picture>
 			<StyledContainer $display='fl' $flex='col' $align='fl-st'>
@@ -34,7 +38,7 @@ export const FavoriteMovieCard: FC<TFavoriteMovieCardProps> = ({ movie, onClick 
 				</p>
 				<p>{rating?.kp.toFixed(1)}</p>
 			</StyledContainer>
-			<Button icon={`${process.env.PUBLIC_URL}assets/delete_icon.png`} size='btn-plain' onClick={onClick} />
+			<Button icon={delete_icon} size='btn-plain' onClick={onClick} />
 		</StyledFavoriteMovieCard>
 	);
 };

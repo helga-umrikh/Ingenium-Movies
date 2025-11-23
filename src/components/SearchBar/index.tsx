@@ -9,6 +9,8 @@ import {
 	Z_INDEX_SEARCHINPUT,
 } from '../../constants/variables';
 import { StyledSearchBar, StyledSearchInput, TStyledSearchInputProps } from './styled';
+import search_white from '@assets/search_white.png';
+import cross_white from '@assets/cross_white.png';
 
 type TSearchBarProps = TStyledSearchInputProps & {
 	placeholder: string;
@@ -55,7 +57,7 @@ export const SearchBar: FC<TSearchBarProps> = ({ placeholder, onChange, isDeskto
 					$width='40px'
 					$zIndex={Z_INDEX_SEARCHICON}
 				>
-					<img src={`${process.env.PUBLIC_URL}assets/search_white.png`} alt='search icon' width={'100%'} />
+					<img src={search_white} alt='search icon' width={'100%'} />
 				</StyledContainer>
 			) : (
 				<StyledContainer
@@ -70,7 +72,7 @@ export const SearchBar: FC<TSearchBarProps> = ({ placeholder, onChange, isDeskto
 						onChange('');
 					}}
 				>
-					<img src={`${process.env.PUBLIC_URL}assets/cross_white.png`} alt='cross delete icon' width={'100%'} />
+					<img src={cross_white} alt='cross delete icon' width={'100%'} />
 				</StyledContainer>
 			)}
 		</StyledSearchBar>
