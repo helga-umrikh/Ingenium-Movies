@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Button } from '@components/Button';
-import { Heading } from '@components/Heading';
 import { StyledContainer } from '@components/Styleds/Container/styled';
 
 import { StyledEmptyFavoriteMovieSection } from './styled';
@@ -21,7 +20,7 @@ export const EmptyFavoriteMoviesSection: FC = () => {
 			>
 				<h3>Список любимых фильмов пуст</h3>
 				<picture>
-					<img src={`${process.env.PUBLIC_URL}assets/drama__icon.png`} />
+					<img src={'assets/drama__icon.png'} />
 				</picture>
 
 				<p>
